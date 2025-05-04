@@ -1,0 +1,455 @@
+> Specter 👾:
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberStorm 2024 - Киберспортивный турнир</title>
+    <style>
+        /* Основные стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #0a0a1a;
+            color: #ffffff;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1a1a3a, #0d0d25);
+            padding: 20px 0;
+            border-bottom: 2px solid #2a2a5a;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #00ffcc;
+        }
+        
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 26, 0.7);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #00ffcc;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #00ffcc;
+            color: #0a0a1a;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.3);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            color: #00ffcc;
+        }
+        
+        .games {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .game-card {
+            background: #1a1a3a;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .game-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .game-info {
+            padding: 20px;
+        }
+        
+        .game-info h3 {
+
+> Specter 👾:
+margin-bottom: 10px;
+            color: #00ffcc;
+        }
+        
+        .schedule {
+            background: #1a1a3a;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #2a2a5a;
+        }
+        
+        th {
+            background: #0d0d25;
+            color: #00ffcc;
+        }
+        
+        tr:hover {
+            background: #2a2a5a;
+        }
+        
+        .prizes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .prize-card {
+            background: #1a1a3a;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            width: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .prize-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #00ffcc;
+        }
+        
+        .prize-place {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffcc;
+            margin-bottom: 10px;
+        }
+        
+        .prize-amount {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background: #0d0d25;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #2a2a5a;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CyberStorm 2023</div>
+                <ul class="nav-links">
+                    <li><a href="#about">О турнире</a></li>
+                    <li><a href="#games">Игры</a></li>
+                    <li><a href="#schedule">Расписание</a></li>
+                    <li><a href="#prizes">Призы</a></li>
+                    <li><a href="#register">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Киберспортивный турнир CyberStorm 2023</h1>
+            <p>Прими участие в крупнейшем киберспортивном событии года с призовым фондом более 1 000 000 рублей!</p>
+            <a href="#register" class="btn">Зарегистрироваться</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">О турнире</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                CyberStorm 2023 - это международный киберспортивный турнир, который объединяет лучших игроков со всего мира. 
+                Турнир пройдет с 15 по 20 ноября в Москве, а также в онлайн-формате. 
+                Участники смогут проявить свои навыки в самых популярных киберспортивных дисциплинах, 
+                побороться за крупный призовой фонд и звание чемпиона.
+            </p>
+        </div>
+    </section>
+    
+    <section id="games" style="background: #0d0d25;">
+        <div class="container">
+            <h2 class="section-title">Игровые дисциплины</h2>
+            <div class="games">
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url('https://via.placeholder.com/300x180');"></div>
+
+> Specter 👾:
+<div class="game-info">
+                        <h3>Dota 2</h3>
+                        <p>5x5, призовой фонд: 500,000 руб.</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url('https://via.placeholder.com/300x180');"></div>
+                    <div class="game-info">
+                        <h3>CS:GO</h3>
+                        <p>5x5, призовой фонд: 300,000 руб.</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="game-img" style="background-image: url('https://via.placeholder.com/300x180');"></div>
+                    <div class="game-info">
+                        <h3>Valorant</h3>
+                        <p>5x5, призовой фонд: 200,000 руб.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="schedule">
+        <div class="container">
+            <h2 class="section-title">Расписание</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Время</th>
+                        <th>Игра</th>
+                        <th>Этап</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15 ноября</td>
+                        <td>12:00 - 18:00</td>
+                        <td>Dota 2</td>
+                        <td>Групповой этап</td>
+                    </tr>
+                    <tr>
+                        <td>16 ноября</td>
+                        <td>12:00 - 18:00</td>
+                        <td>CS:GO</td>
+                        <td>Групповой этап</td>
+                    </tr>
+                    <tr>
+                        <td>17 ноября</td>
+                        <td>12:00 - 18:00</td>
+                        <td>Valorant</td>
+                        <td>Групповой этап</td>
+                    </tr>
+                    <tr>
+                        <td>18 ноября</td>
+                        <td>14:00 - 20:00</td>
+                        <td>Dota 2</td>
+                        <td>Полуфиналы</td>
+                    </tr>
+                    <tr>
+                        <td>19 ноября</td>
+                        <td>14:00 - 20:00</td>
+                        <td>CS:GO, Valorant</td>
+                        <td>Полуфиналы</td>
+                    </tr>
+                    <tr>
+                        <td>20 ноября</td>
+                        <td>16:00 - 22:00</td>
+                        <td>Все дисциплины</td>
+                        <td>Финалы</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <section id="prizes" style="background: #0d0d25;">
+        <div class="container">
+            <h2 class="section-title">Призовой фонд</h2>
+            <div class="prizes">
+                <div class="prize-card">
+                    <div class="prize-place">1 место</div>
+                    <div class="prize-amount">500,000 руб.</div>
+                    <p>+ кубок чемпиона</p>
+                    <p>+ игровые девайсы</p>
+                </div>
+                <div class="prize-card">
+                    <div class="prize-place">2 место</div>
+                    <div class="prize-amount">300,000 руб.</div>
+                    <p>+ игровые девайсы</p>
+                </div>
+                <div class="prize-card">
+                    <div class="prize-place">3 место</div>
+                    <div class="prize-amount">200,000 руб.</div>
+                    <p>+ игровые аксессуары</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+> Specter 👾:
+<section id="register">
+        <div class="container">
+            <h2 class="section-title">Регистрация</h2>
+            <form style="max-width: 600px; margin: 0 auto;">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px;">Имя команды</label>
+                    <input type="text" style="width: 100%; padding: 10px; background: #1a1a3a; border: 1px solid #2a2a5a; color: white; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px;">Игра</label>
+                    <select style="width: 100%; padding: 10px; background: #1a1a3a; border: 1px solid #2a2a5a; color: white; border-radius: 5px;">
+                        <option>Dota 2</option>
+                        <option>CS:GO</option>
+                        <option>Valorant</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px;">Email капитана</label>
+                    <input type="email" style="width: 100%; padding: 10px; background: #1a1a3a; border: 1px solid #2a2a5a; color: white; border-radius: 5px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px;">Телефон для связи</label>
+                    <input type="tel" style="width: 100%; padding: 10px; background: #1a1a3a; border: 1px solid #2a2a5a; color: white; border-radius: 5px;">
+                </div>
+                <button type="submit" class="btn" style="border: none; cursor: pointer;">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© CyberStorm 2023 | Все права защищены</p>
+            <div class="social-links">
+                <a href="#">VK</a>
+                <a href="#">Telegram</a>
+                <a href="#">Twitch</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+       
+        
+            
+      
+           
+            
+            
+      
+        
+    
+         
+           
